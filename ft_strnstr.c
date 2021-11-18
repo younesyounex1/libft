@@ -12,6 +12,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
+
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
@@ -29,13 +30,11 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 		{
 			haystack++;
 			i++;
-			printf("%zu",i);
 		}
 		if (check == lenneedle)
 			return ((char *)haystack - check);
 		check = -1;
 		i++;
-		printf("%zu",i);
 		haystack++;
 	}
 	return (NULL);

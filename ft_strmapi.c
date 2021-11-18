@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 13:05:49 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/14 19:12:00 by yelousse         ###   ########.fr       */
+/*   Created: 2021/11/17 14:01:09 by yelousse          #+#    #+#             */
+/*   Updated: 2021/11/17 19:44:51 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
+#include <stdio.h>
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start,size_t len)
+static char	f(unsigned int i, char c)
 {
-	char			*p;
-	unsigned int	i;
-	unsigned int	j;
+	i = 32;
+	return (c + i);
+ }
 
-	i = 0;
-	j = 0;
-	if (ft_strlen(s + start) < len)
-		len = ft_strlen(s + start);
-	p = (char *) malloc(sizeof(char) * (len + 1));
-	if (p == NULL || s == NULL)
-		return (NULL);
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	unsigned	int	i;
+	char			*p;
+
+	i =	 0;
+	p = malloc(sizeof(char) * ft_strlen(s) + 1);
 	while (s[i])
 	{
-		if (i == start)
-		{
-			while(j < len)
-				p[j++] = s[i++];
-			p[j] = '\0';
-		}
-		i++;
+		 p[i] = f(i, s[i]);
+		 i++;
 	}
 	return (p);
+}
+
+int main()
+{
+	printf("%s", ft_strmapi("ADCVSF",&f));
 }
