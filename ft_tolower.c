@@ -6,11 +6,12 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 12:50:38 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/09 13:07:09 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/22 19:32:22 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int	tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c <= 90 && c >= 65)
 		c += 32;

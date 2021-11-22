@@ -6,11 +6,10 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 12:09:55 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/11 12:14:46 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/22 19:11:03 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *src)
 {

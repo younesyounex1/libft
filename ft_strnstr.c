@@ -20,22 +20,30 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 	int	check;
 
 	i = 0;
-	check = -1;
 	if (!(*needle))
 		return ((char *)haystack);
 	lenneedle = ft_strlen(needle);
 	while (i < len && *haystack)
 	{
+		check = 0;
 		while (*haystack == *(needle + (++check)) && i < len)
 		{
 			haystack++;
 			i++;
 		}
+		//printf("%d || %d", check, lenneedle);
 		if (check == lenneedle)
 			return ((char *)haystack - check);
-		check = -1;
 		i++;
 		haystack++;
 	}
 	return (NULL);
-}
+}/*
+#include<stdio.h>
+int main()
+{
+	char *s1 = "A";
+	char *i1 = strnstr(s1, s1, 2);
+	char *i2 = ft_strnstr(s1, s1, 2);
+	printf("%s",i2);
+}*/

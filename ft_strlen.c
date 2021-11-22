@@ -6,10 +6,9 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 15:53:12 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/12 19:53:34 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/22 18:40:18 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
 size_t	ft_strlen(const char *s)

@@ -6,13 +6,12 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 19:07:08 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/12 22:43:08 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/22 19:13:40 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
 #include "libft.h"
 
-size_t	check_len(char const *s1, char const *s2)
+static size_t	check_len(char const *s1, char const *s2)
 {	
 	if (s2 == NULL)
 		return (ft_strlen(s1));
@@ -47,8 +46,8 @@ char *ft_strjoin(char const *s1, char const *s2)
 	p[i] = '\0';
 	return (p);
 }
-
+/*
 int main()
 {
 	printf("%s",ft_strjoin("Hello"," World!"));
-}
+}*/

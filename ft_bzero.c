@@ -6,9 +6,10 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 12:04:37 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/06 15:36:18 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/21 01:13:12 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 void	ft_bzero(void *b,size_t n)
 {

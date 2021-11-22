@@ -6,9 +6,10 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 19:50:03 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/17 20:05:49 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/22 19:20:45 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

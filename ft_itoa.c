@@ -6,11 +6,9 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 17:35:16 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/17 13:57:14 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/22 19:19:13 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
 #include "libft.h"
 
 static int	ft_nbrlen(long n)
@@ -58,8 +56,8 @@ char	*ft_itoa(int n)
 	}
 	return (p);
 }
-
+/*
 int	main()
 {
 	printf("%s",ft_itoa(-2147483648));
-}
+}*/

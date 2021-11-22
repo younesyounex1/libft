@@ -6,13 +6,12 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 22:44:30 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/16 01:20:08 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/22 19:14:21 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
 #include "libft.h"
 
-size_t	findLenInFirst(char const *s1, char const *set)
+static size_t	findLenInFirst(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	check;
@@ -40,7 +39,7 @@ size_t	findLenInFirst(char const *s1, char const *set)
 	return (i);
 }
 
-size_t	findLenInLast(char const *s1, char const *set, size_t first)
+static size_t	findLenInLast(char const *s1, char const *set, size_t first)
 {
 	size_t	i;
 	size_t	check;
@@ -91,9 +90,9 @@ char *ft_strtrim(char const *s1, char const *set)
 	p[i] = '\0';
 	return (p);
 }
-
+/*
 int main()
 {
 	char str[] = ",,,,,,,,,,,,,,,,,";
 	printf("%s",ft_strtrim(str,","));
-}
+}*/

@@ -6,11 +6,12 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 11:24:47 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/09 12:50:09 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/22 22:17:32 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int	toupper_l(int c)
+int	ft_toupper(int c)
 {
 	if (c <= 122 && c >= 97)
 		c -= 32;

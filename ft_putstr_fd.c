@@ -6,10 +6,10 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 23:01:00 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/17 23:34:19 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/22 19:24:01 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include "libft.h"
 
 void ft_putstr_fd(char *s, int fd)
 {
