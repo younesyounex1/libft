@@ -6,7 +6,7 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 19:07:08 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/22 19:13:40 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/24 19:06:30 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -19,7 +19,7 @@ static size_t	check_len(char const *s1, char const *s2)
 		return (ft_strlen(s1) + ft_strlen(s2));
 }
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*p;
 	size_t	len;
@@ -30,11 +30,10 @@ char *ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	if (s1 == NULL)
 		return (NULL);
-	len = check_len(s1,s2);
+	len = check_len(s1, s2);
 	p = (char *) malloc(sizeof(char) * len + 1);
 	if (p == NULL)
 		return (NULL);
-	printf("%zu\n",len);
 	while (i < len)
 	{
 		if (i < ft_strlen(s1))

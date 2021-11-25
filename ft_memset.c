@@ -6,7 +6,7 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 21:32:14 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/22 21:05:08 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/24 19:00:28 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -16,7 +16,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	size_t	i;
 
 	i = 0;
-	while(i < len)
+	while (i < len)
 	{
 		((char *)b)[i] = (unsigned char )c;
 		i++;

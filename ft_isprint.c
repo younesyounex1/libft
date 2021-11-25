@@ -6,12 +6,12 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 15:38:31 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/22 18:39:47 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/24 18:42:50 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isprint(int	c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);

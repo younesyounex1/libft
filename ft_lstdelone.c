@@ -6,12 +6,12 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 13:10:08 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/22 19:27:50 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/24 18:49:31 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (lst)
 	{
@@ -63,5 +63,4 @@ int    main()
     ft_lstdelone(lst, del);
     printf("%s\n", (char *)lst->content);
 }
-
-
+*/

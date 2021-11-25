@@ -6,12 +6,12 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 15:14:59 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/22 22:33:37 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/24 19:07:31 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst,const char *src,size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	lendest;
 	size_t	lensrc;

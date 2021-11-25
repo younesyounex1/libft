@@ -1,5 +1,5 @@
 /* ************************************************************************** */
-
+/*                                                                            */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
@@ -12,38 +12,38 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
-	int	lenneedle;
-	int	check;
+	int		lenneedle;
+	int		check;
+	size_t	j;
 
 	i = 0;
 	if (!(*needle))
 		return ((char *)haystack);
 	lenneedle = ft_strlen(needle);
-	while (i < len && *haystack)
+	while (i < len && haystack[i])
 	{
 		check = 0;
-		while (*haystack == *(needle + (++check)) && i < len)
+		j = i;
+		while (haystack[j] == needle[check] && j < len && haystack[j])
 		{
-			haystack++;
-			i++;
+			j++;
+			check++;
 		}
-		//printf("%d || %d", check, lenneedle);
 		if (check == lenneedle)
-			return ((char *)haystack - check);
+			return ((char *)haystack + i);
 		i++;
-		haystack++;
 	}
 	return (NULL);
-}/*
-#include<stdio.h>
+}
+/*
 int main()
 {
-	char *s1 = "A";
-	char *i1 = strnstr(s1, s1, 2);
-	char *i2 = ft_strnstr(s1, s1, 2);
-	printf("%s",i2);
+	char *s1 = "aaabcabcd";
+	char *i1 = "cd";
+	char *i2 = ft_strnstr(s1, i1, 8);
+	printf("%s\n",strnstr(s1, i1, 8));
+	printf("|%s|",i2);
 }*/

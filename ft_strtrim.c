@@ -6,12 +6,12 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 22:44:30 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/22 19:14:21 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/25 19:34:55 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-static size_t	findLenInFirst(char const *s1, char const *set)
+static size_t	find_len_in_first(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	check;
@@ -21,25 +21,25 @@ static size_t	findLenInFirst(char const *s1, char const *set)
 	j = 0;
 	while (i < ft_strlen(s1))
 	{
-		while(set[j])
-		{
 			check = 0;
+		while (set[j])
+		{
 			if (s1[i] == set[j])
 			{
 				check++;
-				break;
+				break ;
 			}
 			j++;
 		}
 		if (check == 0)
-			break;
+			break ;
 		j = 0;
 		i++;
 	}
 	return (i);
 }
 
-static size_t	findLenInLast(char const *s1, char const *set, size_t first)
+static size_t	find_len_in_last(char const *s1, char const *set, size_t first)
 {
 	size_t	i;
 	size_t	check;
@@ -49,37 +49,40 @@ static size_t	findLenInLast(char const *s1, char const *set, size_t first)
 	i = ft_strlen(s1);
 	while (first < i)
 	{
-		while(set[j])
+		while (set[j])
 		{
 			check = 0;
-			if(s1[i - 1] == set[j])
+			if (s1[i - 1] == set[j])
 			{
 				check++;
-				break;
+				break ;
 			}
 			j++;
 		}
 		if (check == 0)
-			break;
+			break ;
 		j = 0;
 		i--;
 	}
 	return (ft_strlen(s1) - i);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*p = NULL;
+	char	*p;
 	size_t	len;
 	size_t	i;
-	size_t	first;
-	size_t	last;
+	size_t	first = 0;
+	size_t	last = 0;
 
 	i = 0;
-	first = findLenInFirst(s1,set);
-	last = findLenInLast(s1,set,first);
+	p = NULL;
+	if (!s1)
+		return (NULL);
+	first = find_len_in_first(s1, set);
+	last = find_len_in_last(s1, set, first);
 	len = ft_strlen(s1) - first - last;
-	p = (char *) malloc(sizeof(char) * len + 1);
+	p = (char *) malloc(sizeof(char) * (len + 1));
 	if (p == NULL)
 		return (NULL);
 	while (i < len)
@@ -93,6 +96,6 @@ char *ft_strtrim(char const *s1, char const *set)
 /*
 int main()
 {
-	char str[] = ",,,,,,,,,,,,,,,,,";
-	printf("%s",ft_strtrim(str,","));
+	char str[] = "123";
+	printf("%s",ft_strtrim(str,""));
 }*/

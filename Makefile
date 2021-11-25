@@ -6,7 +6,7 @@
 #    By: yelousse <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/21 16:08:20 by yelousse          #+#    #+#              #
-#    Updated: 2021/11/22 16:38:56 by yelousse         ###   ########.fr        #
+#    Updated: 2021/11/25 17:26:55 by yelousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,22 @@ SRC    =    ft_atoi.c    \
         ft_strdup.c    \
         ft_strlen.c    \
         ft_strtrim.c    \
+		ft_itoa.c      \
+		ft_strmapi.c   \
+		ft_striteri.c  \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c   \
+		ft_putendl_fd.c   \
+		ft_putnbr_fd.c  \
+		ft_lstnew.c    \
+		ft_lstadd_front.c  \
+		ft_lstsize.c		\
+		ft_lstlast.c		\
+		ft_lstadd_back.c	\
+		ft_lstdelone.c		\
+		ft_lstclear.c		\
+		ft_lstiter.c		\
+		ft_lstmap.c			\
 
 OBJS = $(SRC:.c=.o)
 
@@ -63,6 +79,8 @@ clean:
 
 fclean: clean
 	$(RM) $(NAME)
+
+bonus: all
 
 re: fclean $(NAME)
 

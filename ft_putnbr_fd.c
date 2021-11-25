@@ -6,12 +6,12 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 23:38:12 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/22 19:24:59 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/24 19:02:10 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;
 	long	nb;
@@ -22,12 +22,15 @@ void ft_putnbr_fd(int n, int fd)
 		nb = -nb;
 		write(fd, "-", 1);
 	}
-	if (nb =< 9)
+	if (nb <= 9)
+	{
 		c = nb + 48;
-		ft_putchar_fd(c , fd);
+		ft_putchar_fd(c, fd);
+	}
 	if (nb > 9)
 	{
-	ft_putnbr_fd(n / 10);
-	c = (nb % 10) + 48;
+		ft_putnbr_fd(nb / 10, fd);
+		c = (nb % 10) + 48;
+		ft_putchar_fd(c, fd);
 	}
 }
