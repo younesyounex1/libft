@@ -6,12 +6,12 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 13:05:49 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/27 20:06:05 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/28 15:58:24 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_fonction(char *p, unsigned int start, size_t len)
+char	*ft_fonction(char *p, char const *s, unsigned int start, size_t len)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -45,12 +45,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	p = (char *) malloc(sizeof(char) * (len + 1));
 	if (p == NULL)
 		return (NULL);
-	p = ft_fonction(p, start, len);
+	p = ft_fonction(p, s, start, len);
 	return (p);
 }
-/*
-int main()
-{
-	printf("%s",ft_substr("tripouille", 100, 1));
-	//printf("\n%s",substr("tripouille", 100, 1));
-}*/
