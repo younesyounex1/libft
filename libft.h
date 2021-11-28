@@ -6,12 +6,12 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:45:31 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/25 17:21:38 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/27 19:54:35 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 # include <unistd.h>
 # include <ctype.h>
 # include <stdlib.h>
