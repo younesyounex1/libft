@@ -6,7 +6,7 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 19:14:35 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/26 15:00:34 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/28 22:58:29 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -120,16 +120,3 @@ char	**ft_split(char const *s, char c)
 	p[k] = NULL;
 	return (p);
 }
-
-// int main() {
-// 	char string[5000] = "Tripo";
-// 	char** token = ft_split("lorem ipsum dolor sit amet, 
-//consectetur adipiscing elit. Sed non risus. 
-//Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, 
-//ultricies sed, dolor. Cras elementum ultricies 
-//diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.", 'i');
-// 	int i = 0;
-// 	while (token[i])
-// 		printf("%s\n", token[i++]);
-//    return 0;
-// }

@@ -6,7 +6,7 @@
 #    By: yelousse <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/21 16:08:20 by yelousse          #+#    #+#              #
-#    Updated: 2021/11/25 17:26:55 by yelousse         ###   ########.fr        #
+#    Updated: 2021/11/29 00:01:59 by yelousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,44 +44,42 @@ SRC    =    ft_atoi.c    \
 		ft_putstr_fd.c   \
 		ft_putendl_fd.c   \
 		ft_putnbr_fd.c  \
-		ft_lstnew.c    \
-		ft_lstadd_front.c  \
-		ft_lstsize.c		\
-		ft_lstlast.c		\
-		ft_lstadd_back.c	\
-		ft_lstdelone.c		\
+
+SRC_B = $(SRC) ft_lstnew.c ft_lstadd_front.c  ft_lstsize.c ft_lstlast.c	ft_lstadd_back.c ft_lstdelone.c \
 		ft_lstclear.c		\
 		ft_lstiter.c		\
-		ft_lstmap.c			\
+		ft_lstmap.c	\
+    
+OBJ_B = $(SRC_B:.c=.o)
 
 OBJS = $(SRC:.c=.o)
 
-CC = gcc
+CC = cc
 
 RM = rm -f
 
-CFLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
 
-IDIR = includes
+all: $(NAME)
 
-%.o : %.c
-	$(CC) $(FLAGS) -c $< -o $@ -I $(IDIR)
+%.o : %.c libft.h
+	$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-all: $(NAME)
-
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJ_B)
 
 fclean: clean
 	$(RM) $(NAME)
 
-bonus: all
+bonus: $(OBJ_B)
+	ar rcs $(NAME) $(OBJ_B)
+
 
 re: fclean $(NAME)
 
-.PHONY = all clean fclean re
+.PHONY = all clean fclean re bonus

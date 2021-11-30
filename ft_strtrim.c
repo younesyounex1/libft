@@ -6,7 +6,7 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 22:44:30 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/27 19:33:25 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/28 22:54:24 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -95,9 +95,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	p[i] = '\0';
 	return (p);
 }
-/*
-int main()
-{
-	char str[] = "123";
-	printf("%s",ft_strtrim(str,""));
-}*/

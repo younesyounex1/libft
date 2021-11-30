@@ -38,12 +38,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-/*
-int main()
-{
-	char *s1 = "aaabcabcd";
-	char *i1 = "cd";
-	char *i2 = ft_strnstr(s1, i1, 8);
-	printf("%s\n",strnstr(s1, i1, 8));
-	printf("|%s|",i2);
-}*/

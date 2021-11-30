@@ -6,7 +6,7 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 19:07:08 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/24 19:06:30 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/28 22:51:36 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -45,8 +45,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	p[i] = '\0';
 	return (p);
 }
-/*
-int main()
-{
-	printf("%s",ft_strjoin("Hello"," World!"));
-}*/

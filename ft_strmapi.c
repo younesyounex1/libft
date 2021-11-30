@@ -6,17 +6,10 @@
 /*   By: yelousse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 14:01:09 by yelousse          #+#    #+#             */
-/*   Updated: 2021/11/26 15:57:09 by yelousse         ###   ########.fr       */
+/*   Updated: 2021/11/29 00:28:05 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-/*
-static char	f(unsigned int i, char c)
-{
-	i = 32;
-	return (c + i);
- }
-*/
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -37,8 +30,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	p[i] = '\0';
 	return (p);
 }
-/*
-int main()
-{
-	printf("%s", ft_strmapi("ADCVSF",&f));
-}*/
